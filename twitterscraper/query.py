@@ -12,8 +12,8 @@ from twitterscraper.user import User
 from fake_useragent import UserAgent
 import urllib
 
-ua = UserAgent()
-HEADER = {'User-Agent': ua.random}
+#ua = UserAgent()
+HEADER = {'User-Agent': "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36"}
 logger.info(HEADER)
 
 INIT_URL = 'https://twitter.com/search?f=tweets&vertical=default&q={q}&l={lang}'
@@ -59,7 +59,7 @@ def query_single_page(query, lang, pos, retry=50, from_user=False):
     :return: The list of tweets, the pos argument for getting the next page.
     """
     url = get_query_url(query, lang, pos, from_user)
-    logger.info('Scraping tweets from {}', url)
+    logger.info('Scraping tweets from ' + url)
 
     try:
         response = requests.get(url, headers=HEADER)
