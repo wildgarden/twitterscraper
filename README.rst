@@ -160,6 +160,8 @@ Here are some examples:
 
 -  search for the occurence of 'Bitcoin' or 'BTC':
    ``twitterscraper "Bitcoin OR BTC" -o bitcoin_tweets.json -l 1000``
+-  search for the occurence of exact phrase 'Tronald Dump':
+   ``twitterscraper "'Tronald Dump'" -o dump.json -l 1000``
 -  search for the occurence of 'Bitcoin' and 'BTC':
    ``twitterscraper "Bitcoin AND BTC" -o bitcoin_tweets.json -l 1000``
 -  search for tweets from a specific user:
